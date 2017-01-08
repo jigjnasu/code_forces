@@ -3,30 +3,30 @@
 #include <string>
 
 int main() {
-	std::vector<std::string> data;
+    std::vector<std::string> data;
 
-	while (1) {
-		std::string line;
-		std::getline(std::cin, line);
+    while (1) {
+        std::string line;
+        std::getline(std::cin, line);
 
-		if (!line.size())
-			break;
+        if (!line.size())
+            break;
 
-		data.push_back(line);
-	}
+        data.push_back(line);
+    }
 
-	unsigned long long int traffic = 0;
-	int online_members = 0;
-	for (int i = 0; i < data.size(); ++i) {
-		if (data[i][0] == '+')
-			++online_members;
-		else if (data[i][0] == '-')
-			--online_members;
-		else
-			traffic += online_members * (data[i].size() - data[i].find(":") - 1);
-	}
+    unsigned long long int traffic = 0;
+    int online_members = 0;
+    for (int i = 0; i < data.size(); ++i) {
+        if (data[i][0] == '+')
+            ++online_members;
+        else if (data[i][0] == '-')
+            --online_members;
+        else
+            traffic += online_members * (data[i].size() - data[i].find(":") - 1);
+    }
 
-	std::cout << traffic << std::endl;
+    std::cout << traffic << std::endl;
 	
-	return 0;
+    return 0;
 }

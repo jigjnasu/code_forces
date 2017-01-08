@@ -4,24 +4,24 @@
 #include <map>
 
 int main() {
-	std::map<std::string, int> dictionary;
-	int N = 0;
-	scanf("%d", &N);
+    std::map<std::string, int> dictionary;
+    int N = 0;
+    scanf("%d", &N);
 
-	while (N--) {
-		char name[64] = { 0 };
-		scanf("%s", &name);
+    while (N--) {
+        char name[64] = { 0 };
+        scanf("%s", &name);
 
-		++dictionary[name];
+        ++dictionary[name];
 
-		const int counter = dictionary[name];
-		if (counter == 1) {
-			printf("OK\n");
-		} else {
-			std::string temp = name + std::to_string(counter - 1);
-			printf("%s\n", temp.c_str());
-		}
-	}
+        const int counter = dictionary[name];
+        if (counter == 1) {
+            printf("OK\n");
+        } else {
+            std::string temp = name + std::to_string(counter - 1);
+            printf("%s\n", temp.c_str());
+        }
+    }
 
-	return 0;
+    return 0;
 }
