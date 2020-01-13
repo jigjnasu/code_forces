@@ -1,6 +1,7 @@
 /*
   Contest 1
   Problem A : Theatre Square
+  Author : Rakesh Kumar
   Date: 14/01/2020
  */
 
