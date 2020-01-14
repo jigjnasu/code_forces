@@ -1,6 +1,6 @@
 /*
   Contest 4
-  Problem A : Registration system
+  Problem C : Registration system
   Author: Rakesh Kumar, cpp.rakesh(at)gmail.com
   Date: 14/01/2020
  */
