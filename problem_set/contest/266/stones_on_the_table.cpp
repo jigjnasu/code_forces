@@ -10,14 +10,19 @@
 int main() {
     int n = 0;
     std::cin >> n;
-    std::cin.ignore();
 
     int r = 0;
-    std::string str;
-    std::getline(std::cin, str);
-    for (std::size_t i = 1; i < str.size(); ++i)
-        if (str[i] == str[i - 1])
+    char p = ' ';
+    std::cin >> p;
+    --n;
+
+    while (n--) {
+        char c = ' ';
+        std::cin >> c;
+        if (c == p)
             ++r;
+        p = c;
+    }
     std::cout << r << std::endl;
 
 
