@@ -1,3 +1,10 @@
+/*
+  Contest 58
+  Problem A : Chat room
+  Author : Rakesh Kumar
+  Date: 22/01/2020
+*/
+
 #include <bits/stdc++.h>
 
 int find(const std::string& str, char c, int pos) {
