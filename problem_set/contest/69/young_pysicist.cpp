@@ -1,3 +1,10 @@
+/*
+  Contest 69
+  Problem A : Young physicist
+  Author : Rakesh Kumar
+  Date: 22/01/2020
+*/
+
 #include <bits/stdc++.h>
 
 int main() {
