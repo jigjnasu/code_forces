@@ -1,3 +1,10 @@
+'''
+  Contest 546
+  Problem A : Soldier and bananas
+  Author : Rakesh Kumar
+  Date: 22/01/2020
+'''
+
 def money():
     s = str(input())
     l = [int(i) for i in s.split()]
