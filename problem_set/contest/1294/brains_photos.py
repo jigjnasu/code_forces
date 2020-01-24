@@ -1,3 +1,10 @@
+'''
+  Contest 1294
+  Problem A : Brain's photos
+  Author : Rakesh Kumar
+  Date: 25/01/2020
+'''
+
 def color(c):
     return c in 'CMY'
 
