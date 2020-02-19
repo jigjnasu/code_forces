@@ -1,6 +1,6 @@
 /*
   Contest 1207
-  Problem B : There are two types of burgers
+  Problem A : There are two types of burgers
   Author : Rakesh Kumar
   Date: 19/02/2020
 */
