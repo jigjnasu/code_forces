@@ -15,7 +15,16 @@ int main() {
     int crime = 0;
     while (n--) {
         int e = 0;
-        scanf("%d")
+        scanf("%d", &e);
+
+        if (e == -1) {
+            if (man > 0)
+                --man;
+            else
+                ++crime;
+        } else {
+            man += e;
+        }
     }
 
     printf("%d\n", crime);
