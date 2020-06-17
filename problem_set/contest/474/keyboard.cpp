@@ -15,15 +15,14 @@ int main() {
     std::cin >> d;
     std::cin.ignore();
 
+    const int offset = (d == 'L') ? 1 : -1;
+
     std::string l;
     std::getline(std::cin, l);
 
     for (char c : l) {
         const std::size_t pos = k.find(c);
-        if (d == 'L')
-            std::cout << k[pos + 1];
-        else
-            std::cout << k[pos - 1];
+            std::cout << k[pos + offset];
     }
 
     std::cout << std::endl;
