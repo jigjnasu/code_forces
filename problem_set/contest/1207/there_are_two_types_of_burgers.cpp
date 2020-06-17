@@ -8,7 +8,6 @@
 #include <bits/stdc++.h>
 
 inline int build_burgers(int b, int p) {
-    int t = b >> 1;
     return std::min((b >> 1), p);
 }
 
