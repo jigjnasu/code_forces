@@ -28,7 +28,7 @@ int main() {
     if (k > 0)
         printf("-1\n");
     else
-        printf("%d\n", 12 - i - 1);
+        printf("%d\n", 11 - i);
 
     return 0;
 }
