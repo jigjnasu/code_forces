@@ -3,12 +3,9 @@
   Problem B : Spreadsheet
   Author: Rakesh Kumar, cpp.rakesh(at)gmail.com
   Date: 08/01/2017
- */
+*/
 
-#include <cstdio>
-#include <string>
-#include <sstream>
-#include <iostream>
+#include <bits/stdc++.h>
 
 std::string to_string(int n) {
     std::ostringstream os;
@@ -76,9 +73,15 @@ bool is_row_column(const std::string& cell) {
     return true;
 }
 
+// First type BC23
+// BC - column, 23 - row
+// Second type R23C55
+// 23 - row, 55 - column
 int main() {
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(NULL);
     int t = 0;
-    scanf("%d", &t);
+    std::cin >> t;
     std::cin.ignore();
 
     while (t--) {
@@ -86,9 +89,9 @@ int main() {
         std::getline(std::cin, cell);
 
         if (is_row_column(cell))
-            printf("%s\n", convert_to_column_row(cell).c_str());
+            std::cout << convert_to_column_row(cell) << std::endl;
         else
-            printf("%s\n", convert_to_row_column(cell).c_str());
+            std::cout << convert_to_row_column(cell) << std::endl;
 
     }
 
