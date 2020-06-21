@@ -18,20 +18,20 @@ int main() {
         int money = 0;
         std::cin >> money;
 
-        if (result == "YES") {
-            int change = money - 25;
-            if (change >= 50 && cash[50]) {
-                change -= 50;
-                --cash[50];
-            }
+        int change = money - 25;
+        if (change >= 50 && cash[50]) {
+            change -= 50;
+            --cash[50];
+        }
 
-            while (change >= 25 && cash[25]) {
-                change -= 25;
-                --cash[25];
-            }
+        while (change >= 25 && cash[25]) {
+            change -= 25;
+            --cash[25];
+        }
 
-            if (change > 0)
-                result = "NO";
+        if (change > 0) {
+            result = "NO";
+            break;
         }
 
         ++cash[money];
