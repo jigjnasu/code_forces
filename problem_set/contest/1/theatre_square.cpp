@@ -10,6 +10,8 @@
 using ll = unsigned long long int;
 
 int main() {
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(NULL);
     ll m = 0;
     ll n = 0;
     ll a = 0;
