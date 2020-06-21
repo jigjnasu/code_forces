@@ -5,22 +5,22 @@
   Date: 15/01/2020
 */
 
-#include <cstdio>
-#include <string>
+#include <bits/stdc++.h>
 
 int main() {
+    std::ios_base::sync_with_stdio(false);
     int n = 0;
-    scanf("%d", &n);
+    std::cin >> n;
 
     std::string result = "EASY";
     while (n--) {
         int s = 0;
-        scanf("%d", &s);
+        std::cin >> s;
 
         if (s)
             result = "HARD";
     }
-    printf("%s\n", result.c_str());
+    std::cout << result << std::endl;
 
     return 0;
 }
