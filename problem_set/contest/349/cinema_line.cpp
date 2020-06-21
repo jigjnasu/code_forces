@@ -8,22 +8,35 @@
 #include <bits/stdc++.h>
 
 int main() {
+    std::ios_base::sync_with_stdio(false);
     int n = 0;
     std::cin >> n;
-    long long int cash = 0;
-    std::string result = "YES";
-    while (n--) {
-        int m = 0;
-        std::cin >> m;
-        if (result == "YES") {
-            if (m > 25)
-                cash = cash - (m - 25);
-            if (cash < 0)
-                result = "NO";
-            cash += 25;
-        }
-    }
-    std::cout << result << std::endl;
 
+    std::string result = "YES";
+    std::unordered_map<int, int> cash;
+    while (n--) {
+        int money = 0;
+        std::cin >> money;
+
+        if (result == "YES") {
+            int change = money - 25;
+            if (change >= 50 && cash[50]) {
+                change -= 50;
+                --cash[50];
+            }
+
+            while (change >= 25 && cash[25]) {
+                change -= 25;
+                --cash[25];
+            }
+
+            if (change > 0)
+                result = "NO";
+        }
+
+        ++cash[money];
+    }
+
+    std::cout << result << std::endl;
     return 0;
 }
