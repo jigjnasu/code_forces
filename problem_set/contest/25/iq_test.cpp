@@ -14,21 +14,21 @@ int main() {
     std::cin >> n;
 
     std::vector<std::tuple<int, int>> v;
+    v.push_back(std::make_tuple(0, 0));
+    v.push_back(std::make_tuple(0, 0));
+
     for (int i = 1; i <= n; ++i) {
         int e = 0;
         std::cin >> e;
-        v.emplace_back(std::make_tuple((e & 1), i));
+        const int p = (e & 1);
+        ++std::get<0>(v[p]);
+        std::get<1>(v[p]) = i;
     }
 
-    std::sort(v.begin(), v.end(), [](const std::tuple<int, int>& a,
-                                     const std::tuple<int, int>& b) {
-                                      return std::get<0>(a) < std::get<0>(b);
-                                  });
-
-    if (std::get<0>(v[0]) != std::get<0>(v[1]))
+    if (std::get<0>(v[0]) == 1)
         std::cout << std::get<1>(v[0]) << std::endl;
     else
-        std::cout << std::get<1>(v[n - 1]) << std::endl;
+        std::cout << std::get<1>(v[1]) << std::endl;
 
     return 0;
 }
