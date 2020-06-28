@@ -8,21 +8,21 @@
 #include <bits/stdc++.h>
 
 using ll = long long int;
-const int m = 1e+5;
 
 int main() {
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(0);
 
-    int e[m + 1] = {0};
     int n = 0;
     ll t = 0;
     std::cin >> n >> t;
 
+    std::vector<int> e;
+
     int v = 0;
     for (int i = 0; i < n; ++i) {
         std::cin >> v;
-        e[i] = v;
+        e.emplace_back(v);
     }
 
     int sol = 0;
