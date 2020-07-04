@@ -1,6 +1,6 @@
 /*
-  Contest: 469
-  Problem A : I wanna be the guy
+  Contest: 25
+  Problem A : IQ Test
   Author : Rakesh Kumar
   Date: 26/06/2020
 */
