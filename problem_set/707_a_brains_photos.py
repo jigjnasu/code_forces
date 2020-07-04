@@ -1,5 +1,5 @@
 '''
-  Contest 1294
+  Contest 707
   Problem A : Brain's photos
   Author : Rakesh Kumar
   Date: 25/01/2020
