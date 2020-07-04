@@ -1,6 +1,6 @@
 /*
   Contest: 750
-  Problem A : Year and hurry
+  Problem A : New Year and Hurry
   Author : Rakesh Kumar
   Date: 21/06/2020
 */
