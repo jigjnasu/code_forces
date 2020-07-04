@@ -1,6 +1,6 @@
 /*
   Contest 977
-  Problem B : Wrong subtraction
+  Problem A : Wrong subtraction
   Author : Rakesh Kumar
   Date: 15/01/2020
 */
