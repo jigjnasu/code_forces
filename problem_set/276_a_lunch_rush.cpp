@@ -1,6 +1,6 @@
 /*
-  Contest : 1228
-  Problem A : Disticnt Digits
+  Contest : 276
+  Problem A : Lunch rush
   Author : Rakesh Kumar
   Date: 05/07/2020
 */
