@@ -23,7 +23,7 @@ int main() {
     int k = 0;
     std::cin >> k;
     int r = 0;
-    for (const std::tuple<int, int> c : book)
+    for (const std::tuple<int, int>& c : book)
         if (k > std::get<1>(c))
             ++r;
     std::cout << book.size() - r << std::endl;
