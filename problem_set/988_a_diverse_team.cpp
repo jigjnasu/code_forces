@@ -2,7 +2,7 @@
   Contest: 988
   Problem A : Diverse Team
   Author : Rakesh Kumar
-  Date: 06/07/2020
+  Date: 07/07/2020
 */
 
 #include <bits/stdc++.h>
