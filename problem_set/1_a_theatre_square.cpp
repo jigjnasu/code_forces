@@ -5,7 +5,7 @@
   Date: 14/01/2020
  */
 
-#include <iostream>
+#include <bits/stdc++.h>
 
 using ll = unsigned long long int;
 
