@@ -1,6 +1,6 @@
 /*
   Contest: 1099
-  Problem C : Snowball
+  Problem A : Snowball
   Author : Rakesh Kumar
   Date: 11/07/2020
 */
