@@ -29,10 +29,8 @@ int main() {
     std::sort(compressed.begin(), compressed.end());
 
     int j = compressed.size() - 1;
-    while (j >= 0 && total > m) {
-        total -= compressed[j];
-        --j;
-    }
+    while (j >= 0 && total > m)
+        total -= compressed[j--];
 
     if (j >= compressed.size() && total > m)
         std::cout << -1 << std::endl;
