@@ -1,6 +1,6 @@
 /*
   Contest: 1255
-  Problem B : Changing volume
+  Problem A : Changing volume
   Author : Rakesh Kumar
   Date: 10/06/2020
 */
