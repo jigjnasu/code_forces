@@ -15,6 +15,6 @@ int main() {
     int a = 0;
     int b = 0;
     std::cin >> n >> a >> b;
-    std::cout << ((a - 1 + b) % n + n) % n + 1;
+    std::cout << ((a - 1 + b) % n + n) % n + 1 << std::endl;
     return 0;
 }
