@@ -25,16 +25,12 @@ int main() {
     std::cin >> l1 >> r1 >> l2 >> r2 >> k;
 
     ull t = 0;
-    ull l = 0;
-    ull r = 0;
     if (bound(l2, l1, r1) ||
         bound(r2, l1, r1) ||
         bound(l1, l2, r2) ||
         bound(r1, l2, r2)) {
-        l = std::max(l1, l2);
-        r = std::min(r1, r2);
-        t = r - l + 1;
-        if (bound(k, l, r))
+        t = std::min(r1, r2) - std::max(l1, l2) + 1;
+        if (bound(k, std::max(l1, l2), std::min(r1, r2)))
             --t;
     }
     std::cout << t << std::endl;
