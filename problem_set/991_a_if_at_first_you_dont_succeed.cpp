@@ -21,5 +21,6 @@ int main() {
         std::cout << n - r << std::endl;
     else
         std::cout << -1 << std::endl;
-            
+
+    return 0;
 }
