@@ -7,9 +7,29 @@
 
 #include <bits/stdc++.h>
 
-inline void print(const std::map<int, int>& m) {
-    for (auto it = m.rbegin(); it != m.rend(); ++it)
-        std::cout << it->first << " | " << it->second << std::endl;
+inline void print(const std::vector<int>& v) {
+    std::cout << "-----------------------------------------------------" << std::endl;
+    for (int e : v)
+        std::cout << e << " ";
+    std::cout << std::endl;
+    std::cout << "-----------------------------------------------------" << std::endl;
+}
+
+int pos(const std::vector<int>& v, int n, int s, int e) {
+    while (1) {
+        if (s == e) {
+            int i = s;
+            while(i >= 1 && v[i] == v[i - 1]) --i;
+            return i + 1;
+        }
+
+        const int m = (s + e) >> 1;
+        if (n >= v[m])
+            e = m;
+        else
+            s = m + 1;
+    }
+    return 0;
 }
 
 int main() {
@@ -19,27 +39,18 @@ int main() {
     int n = 0;
     std::cin >> n;
 
-    std::map<int, int> volume;
-    std::vector<int> vec;
+    std::vector<int> v1;
     while (n--) {
         int e = 0;
         std::cin >> e;
-        ++volume[e];
-        vec.emplace_back(e);
+        v1.emplace_back(e);
     }
 
-    std::unordered_map<int, int> pos;
-    auto it = volume.rbegin();
-    int p = it->second;
-    pos[it->first] = 1; ++it;
-    while (it != volume.rend()) {
-        pos[it->first] = p + 1;
-        p += it->second;
-        ++it;
-    }
+    std::vector<int> v2 = v1;
+    std::sort(v2.rbegin(), v2.rend());
 
-    for (int e : vec)
-        std::cout << pos[e] << " ";
+    for (int e : v1)
+        std::cout << pos(v2, e, 0, v1.size() - 1) << " ";
     std::cout << std::endl;
 
     return 0;
