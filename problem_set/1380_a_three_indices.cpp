@@ -23,8 +23,8 @@ int main() {
         int p = 0;
         for (int i = 2; i < n; ++i) {
             std::cin >> v[i];
-            if (!p && (v[i - 1] > v[i - 2] &&
-                       v[i - 1] > v[i])) {
+            if (v[i - 1] > v[i - 2] &&
+                v[i - 1] > v[i]) {
                 p = i - 1;
                 result = "YES";
             }
