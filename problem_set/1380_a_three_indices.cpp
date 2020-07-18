@@ -1,7 +1,7 @@
 /*
   Contest : 1380
   Problem A : Three indices
-  Author : Rakesh Kumar
+  Author : Rakesh Kumar Baghel
   Date: 19/07/2020
 */
 
@@ -17,20 +17,16 @@ int main() {
         int n = 0;
         std::cin >> n;
 
-        std::vector<int> perm;
-        while (n--) {
-            int v = 0;
-            std::cin >> v;
-            perm.emplace_back(v);
-        }
-
+        std::vector<int> v(n, 0);
+        std::cin >> v[0] >> v[1];
         std::string result = "NO";
         int p = 0;
-        for (std::size_t i = 1; i < perm.size() - 1; ++i) {
-            if (perm[i] > perm[i - 1] && perm[i] > perm[i + 1]) {
+        for (int i = 2; i < n; ++i) {
+            std::cin >> v[i];
+            if (!p && (v[i - 1] > v[i - 2] &&
+                       v[i - 1] > v[i])) {
+                p = i - 1;
                 result = "YES";
-                p = i;
-                break;
             }
         }
 
