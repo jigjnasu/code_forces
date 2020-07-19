@@ -7,17 +7,6 @@
 
 #include <bits/stdc++.h>
 
-inline char f(int n) {
-    if (n == 2)
-        return '1';
-    if (n == 3)
-        return '7';
-    if (n & 1 == 1)
-        return f(n - 3) + f(n - 2);
-    else
-        return f(n - 2) + f(n - 2);
-}
-
 int main() {
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(0); std::cout.tie(0);
