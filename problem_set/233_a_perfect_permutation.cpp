@@ -16,8 +16,9 @@ int main() {
     if (n & 1 == 1)
         std::cout << -1;
     else {
-        for (int i = 2; i <= n; i += 2)
-            std::cout << i << " " << i - 1 << " ";
+        for (int i = 1; i <= (n >> 1); ++i)
+            std::cout << (i << 1) << " " << ((i << 1) - 1) << " ";
+
     }
     std::cout << std::endl;
 
