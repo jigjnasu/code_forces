@@ -17,7 +17,6 @@ int main() {
     std::cin >> n >> k;
 
     const ll odds = std::ceil(n / static_cast<double>(2));
-    const ll evens = n - odds;
     if (k <= odds)
         std::cout << ((k - 1) << 1) + 1 << std::endl;
     else
