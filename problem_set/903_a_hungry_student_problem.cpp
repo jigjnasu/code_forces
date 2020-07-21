@@ -25,9 +25,9 @@ int main() {
             bool found = false;
             for (int i = 0; i < 34; ++i) {
                 const int temp  = x - (3 * i);
-                if (temp < 0)
+                if (temp <= 0)
                     break;
-                if (temp > 0 && temp % 7 == 0) {
+                if (temp % 7 == 0) {
                     std::cout << "YES" << std::endl;
                     found = true;
                     break;
