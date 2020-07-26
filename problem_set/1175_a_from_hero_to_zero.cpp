@@ -9,14 +9,15 @@
 
 using ll = long long int;
 
-ll steps(ll n, ll k) {
+inline ll steps(ll n, ll k) {
     ll s = 0;
     while (n) {
-        if (n % k == 0)
-            n /= k;
-        else
-            --n;
-        ++s;
+        const ll r = n % k;
+        if (r) {
+            s += r; n -= r;
+        } else {
+            s++; n /= k;
+        }
     }
     return s;
 }
