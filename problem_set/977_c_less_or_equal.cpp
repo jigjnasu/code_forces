@@ -2,7 +2,7 @@
   Contest : 977
   Problem C : Less or Equal
   Author : Rakesh Kumar
-  Date: 18/07/2020
+  Date: 04/08/2020
 */
 
 #include <bits/stdc++.h>
