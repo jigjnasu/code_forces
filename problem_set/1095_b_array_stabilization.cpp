@@ -13,14 +13,32 @@ int main() {
 
     int n = 0;
     std::cin >> n;
-    std::vector<int> v;
+
+    int first_max = 0;
+    int second_max = 0;
+
+    int first_min = (1e+5) + 10;
+    int second_min = first_min;
+
     while (n--) {
         int e = 0;
         std::cin >> e;
-        v.emplace_back(e);
+
+        if (e > first_max) {
+            second_max = first_max;
+            first_max = e;
+        } else if (e > second_max) {
+            second_max = e;
+        }
+
+        if (e < first_min) {
+            second_min = first_min;
+            first_min = e;
+        } else if (e < second_min) {
+            second_min = e;
+        }
     }
-    std::sort(v.begin(), v.end());
-    std::cout << std::min(v[v.size() - 2] - v[0], v[v.size() - 1] - v[1]) << std::endl;
+    std::cout << std::min(first_max - second_min, second_max - first_min) << std::endl;
 
     return 0;
 }
