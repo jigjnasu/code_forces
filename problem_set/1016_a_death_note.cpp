@@ -22,8 +22,7 @@ int main() {
         v[i] = nm + v[i - 1];
     }
 
-    std::cout << v[1] / m << " ";
-    for (ull i = 2; i <= n; ++i)
+    for (ull i = 1; i <= n; ++i)
         std::cout << v[i] / m - v[i - 1] / m << " ";
     std::cout << std::endl;
 
