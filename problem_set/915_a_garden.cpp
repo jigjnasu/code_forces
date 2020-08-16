@@ -2,7 +2,7 @@
   Contest : 915
   Problem A : Garden
   Author : Rakesh Kumar
-  Date: 16/08/2020
+  Date: 17/08/2020
 */
 
 #include <bits/stdc++.h>
