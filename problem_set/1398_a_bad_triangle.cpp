@@ -27,7 +27,7 @@ int main() {
         int sum = tri[0] + tri[1];
         for (std::size_t i = 2; i < tri.size(); ++i) {
             if (tri[i] >= sum) {
-                std::cout << 1 << " " << 2 << " " << i + 1 << std::endl;
+                std::cout << "1 2 " << i + 1 << std::endl;
                 result = true;
                 break;
             }
