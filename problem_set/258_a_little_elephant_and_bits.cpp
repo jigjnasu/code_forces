@@ -13,20 +13,13 @@ int main() {
 
     std::string s;
     std::getline(std::cin, s);
-    bool d = false;
-    if (s.find('0') == std::string::npos) {
+    const std::size_t pos = s.find('0');
+    if (pos == std::string::npos) {
         std::cout << s.substr(0, s.size() - 1);
     }
     else {
-        for (char c : s) {
-            if (d == false) {
-                if (c == '0') {
-                    d = true;
-                    continue;
-                }
-            }
-            std::cout << c;
-        }
+        std::cout << s.substr(0, pos);
+        std::cout << s.substr(pos + 1, s.size() - pos + 1);
     }
     std::cout << std::endl;
 
