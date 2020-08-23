@@ -13,17 +13,14 @@ int main() {
 
     int n = 0;
     std::cin >> n;
-    bool found = false;
+    int r = 1;
     while (n--) {
         int paisa = 0;
         std::cin >> paisa;
         if (paisa == 1)
-            found = true;
+            r = -1;
     }
-    if (found)
-        std::cout << -1 << std::endl;
-    else
-        std::cout << 1 << std::endl;
+    std::cout << r << std::endl;
 
     return 0;
 }
