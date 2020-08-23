@@ -22,9 +22,9 @@ int main() {
 
     int count = 0;
     for (std::size_t i = 1; i < v.size() - 1; ++i) {
-        if (v[i] == 0 && v[i - 1] == 1 && v[i + 1] == 1) {
+        if (!v[i] && v[i - 1] && v[i + 1]) {
             ++count;
-            v[i + 1] = 0;
+            v[i + 1] = false;
         }
     }
     std::cout << count << std::endl;
