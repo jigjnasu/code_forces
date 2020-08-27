@@ -13,7 +13,8 @@ int main() {
 
     int a = 0, b = 0, c = 0;
     std::cin >> a >> b >> c;
-    std::cout << std::max(std::max(a + b + c, a * b * c), std::max((a + b) * c, a * (b + c)))
+    std::cout << std::max(std::max(a + b + c, a * b * c),
+                          std::max((a + b) * c, a * (b + c)))
               << std::endl;
 
     return 0;
