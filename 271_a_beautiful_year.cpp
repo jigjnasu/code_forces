@@ -7,7 +7,7 @@
 
 #include <bits/stdc++.h>
 
-bool anokha(int v) {
+inline bool anokha(int v) {
     std::string varsh = std::to_string(v);
     std::vector<bool> d(10, false);
     for (char c : varsh)
