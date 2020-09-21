@@ -13,10 +13,7 @@ int main() {
 
     int n1 = 0, k1 = 0, n2 = 0, k2 = 0;
     std::cin >> n1 >> n2 >> k1 >> k2;
-    if (n1 > n2)
-        std::cout << "First" << std::endl;
-    else
-        std::cout << "Second" << std::endl;
+    std::cout << (n1 > n2 ? "First" : "Second") << std::endl;
 
     return 0;
 }
