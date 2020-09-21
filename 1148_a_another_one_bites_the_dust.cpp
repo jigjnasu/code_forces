@@ -15,7 +15,7 @@ int main() {
 
     ll a = 0, b = 0, c = 0;
     std::cin >> a >> b >> c;
-    ll r = 2 * std::min(a, b) + 2 * c;
+    ll r = (std::min(a, b) << 1) + (c << 1);
     if (a != b) ++r;
     std::cout << r << std::endl;
 
