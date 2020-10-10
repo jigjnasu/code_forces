@@ -1,8 +1,8 @@
 /*
-  Contest : 1003
-  Problem A : Polycrap's pockets
+  Contest : 1183
+  Problem B : Equalize Prices
   Author : Rakesh Kumar
-  Date: 14/06/2020
+  Date: 10/10/2020
 */
 
 #include <bits/stdc++.h>
