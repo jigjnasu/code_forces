@@ -16,17 +16,14 @@ int main() {
     while (t--) {
         int a = 0, b = 0;
         std::cin >> a >> b;
-        int r = 0;
-        if (a < b) {
-            if ((b - a) & 1)
-                r = 1;
-            else
-                r = 2;
-        } else if (a > b) {
-            if (((a - b) & 1) == 0)
-                r = 1;
-            else
-                r = 2;
+        int r = 0, t = 0;
+        if (a != b) {
+            r = 1;
+            t = std::abs(a - b);
+            if (a < b && (t & 1) == 0)
+                ++r;
+            if (a > b && t & 1)
+                ++r;
         }
         std::cout << r << std::endl;
     }
